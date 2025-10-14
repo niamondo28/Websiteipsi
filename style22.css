@@ -1,0 +1,51 @@
+body {
+  font-family: sans-serif;
+  background-color: #f0f2f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.cardtupoksi-container {
+  width: 80%;
+  max-width: 600px;
+}
+
+.cardtupoksi {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  overflow: hidden; /* Penting agar sudut melengkung terlihat rapi */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cardtupoksi-header {
+  padding: 15px 20px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer; /* Mengubah kursor menjadi tangan saat di atas judul */
+  transition: background-color 0.3s;
+}
+
+.cardtupoksi-header:hover {
+  background-color: #0056b3;
+}
+
+/* INI BAGIAN KUNCINYA: Sembunyikan konten secara default */
+.cardtupoksi-content {
+  display: none;
+  padding: 20px;
+  border-top: 1px solid #ddd;
+}
+
+/* Style tambahan saat kartu aktif/terbuka */
+.card.active .cardtupoksi-header {
+  background-color: #51acf7; /* Ubah warna header saat aktif */
+}
+
+/* PERINTAH UNTUK MENAMPILKAN KONTEN SAAT KARTU AKTIF */
+.card.active .cardtupoksi-content {
+  display: block; /* Tampilkan kontennya */
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sejarah - Ikatan Pencak Silat</title>
+
+  <!-- Tema otomatis siang/malam -->
+  <link id="theme-css" rel="stylesheet" href="style2.css" />
+  <script>
+    const DAY_START = 6;
+    const NIGHT_START = 18;
+
+    function applyAutoTheme() {
+      const hour = new Date().getHours();
+      const isDay = hour >= DAY_START && hour < NIGHT_START;
+      const link = document.getElementById("theme-css");
+      const newHref = isDay ? "style.css" : "style2.css";
+
+      if (link.getAttribute("href") !== newHref) {
+        link.setAttribute("href", newHref);
+      }
+
+      document.documentElement.setAttribute(
+        "data-theme",
+        isDay ? "day" : "night"
+      );
+    }
+
+    document.addEventListener("DOMContentLoaded", applyAutoTheme);
+    setInterval(applyAutoTheme, 60 * 1000);
+    document.addEventListener("visibilitychange", () => {
+      if (!document.hidden) applyAutoTheme();
+    });
+  </script>
+
+  <!-- Fonts dan ikon -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body>
+  <div id="navbar-placeholder"></div>
+
+  <main class="halaman-konten" id="sejarah-page">
+    <div class="sejarah-container">
+      <h1>Sejarah Ikatan Pencak Silat</h1>
+
+      <img src="fotoipsi/sejarah.png" alt="Gedung Kantor Diskominfo Kotamobagu" class="sejarah-hero" />
+
+      <section id="awal">
+        <h2>Awal Pembentukan</h2>
+        <p>
+          Sejarah IPSI bermula pada 18 Mei 1948 di Surakarta, Jawa Tengah, sebagai wadah organisasi untuk mempersatukan
+          dan membina berbagai aliran pencak silat di Indonesia pasca-kemerdekaan.
+          Didirikan oleh tokoh-tokoh pencak silat dan pejabat pemerintah, tujuan utamanya adalah melestarikan,
+          mengembangkan, dan meningkatkan kualitas pencak silat sebagai budaya bangsa,
+          serta mempererat persaudaraan antar perguruan silat.
+        </p>
+      </section>
+
+      <section id="latar-belakang">
+        <h2>Latar Belakang Berdirinya IPSI</h2>
+        <p>
+          Sebelum IPSI berdiri, sudah ada upaya-upaya untuk mempersatukan perguruan silat,
+          seperti pembentukan Gabungan Pencak Mataram (GAPEMA) di Yogyakarta tahun 1934
+          dan kemudian Gabungan Pentjak Seluruh Indonesia (Gapensi) tahun 1947.
+        </p>
+      </section>
+
+      <section id="tokoh">
+        <h2>Peran Tokoh Pendiri</h2>
+        <p>
+          Salah satu tokoh kunci dalam pendirian IPSI adalah <strong>Mr. K.R.M.T. Wongsonegoro</strong>,
+          yang memimpin konferensi pembentukan IPSI dan menjadi ketua umumnya.
+        </p>
+      </section>
+
+      <section id="tujuan">
+        <h2>Tujuan Utama</h2>
+        <p>
+          IPSI bertujuan mempersatukan, membina persaudaraan, dan kesetiakawanan antar perguruan pencak silat.
+        </p>
+      </section>
+
+      <section id="standar">
+        <h2>Standardisasi</h2>
+        <p>
+          IPSI juga berusaha menstandarkan sistem silat nasional, meskipun upaya ini terkadang menghadapi
+          kesulitan karena perbedaan pendapat antara pendekar tradisional dan mereka yang mengedepankan
+          pencak silat sebagai olahraga.
+        </p>
+      </section>
+
+      <section id="internasional">
+        <h2>Perkembangan Internasional</h2>
+        <p>
+          Pencak silat pertama kali dipertandingkan di <strong>Pekan Olahraga Nasional (PON) 1973</strong>,
+          dan kemudian masuk dalam <strong>SEA Games sejak 1987</strong> serta <strong>Asian Games 2018</strong>.
+          Dengan sejarahnya yang panjang, IPSI terus berperan aktif dalam melestarikan dan mengembangkan
+          pencak silat sebagai bagian dari warisan budaya bangsa Indonesia, serta sebagai olahraga yang mendunia.
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-top">
+        <img src="fotoipsi/Logoipsi.png" alt="Logo IPSI" />
+        <div class="footer-title">
+          <span>WEB PORTAL</span>
+          <p>IPSI Sulawesi Utara</p>
+        </div>
+      </div>
+
+      <div class="footer-main">
+        <div class="footer-contact">
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Jl. Stadion Selatan, Ranotana, Kec. Sario, Kota Manado, Sulawesi Utara</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-globe"></i>
+            <span>@disporamanado</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:disporamanado16@gmail.com">disporamanado16@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="footer-social">
+          <h4>Sosial Media:</h4>
+          <div class="social-icons">
+            <a href="https://www.youtube.com/@disporamanado" target="_blank" class="social-youtube"><i
+                class="fab fa-youtube"></i></a>
+            <a href="https://www.facebook.com/disporamanado/" target="_blank" class="social-facebook"><i
+                class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/disporamanado/?hl=id" target="_blank" class="social-instagram"><i
+                class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Ikatan Pencak Silat Sulawesi Utara. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="navbar.js"></script>
+</body>
+
+</html>

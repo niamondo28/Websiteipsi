@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agenda Kegiatan - Diskominfo Kotamobagu</title>
+  <!-- dari sini -->
+  <link id="theme-css" rel="stylesheet" href="style2.css" />
+  <script>
+    const DAY_START = 6;
+    const NIGHT_START = 18;
+    function applyAutoTheme() {
+      const hour = new Date().getHours();
+      const isDay = hour >= DAY_START && hour < NIGHT_START;
+      const link = document.getElementById("theme-css");
+      const newHref = isDay ? "style.css" : "style2.css";
+      if (link.getAttribute("href") !== newHref) {
+        link.setAttribute("href", newHref);
+      }
+      document.documentElement.setAttribute(
+        "data-theme",
+        isDay ? "day" : "night"
+      );
+    }
+    document.addEventListener("DOMContentLoaded", applyAutoTheme);
+    setInterval(applyAutoTheme, 60 * 1000); // tiap 1 menit
+    document.addEventListener("visibilitychange", () => {
+      if (!document.hidden) applyAutoTheme();
+    });
+  </script>
+  <!-- sampe sini -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body>
+  <div id="navbar-placeholder"></div>
+  <main>
+    <div class="container-agenda">
+      <div class="agenda-header">
+        <h1>Agenda Kegiatan</h1>
+      </div>
+
+      <div class="agenda-item">
+        <div class="agenda-image">
+          <a class="agenda-foto" href="Launching Oben_ Ojek Bentor Service.png" data-plugin-option="{" type":"image"}">
+            <img src="Launching Oben_ Ojek Bentor Service.png" alt="Launching Aplikasi Oben" />
+          </a>
+        </div>
+        <div class="agenda-content">
+          <h2>Launching Aplikasi Oben (Ojek Bentor)</h2>
+          <div class="agenda-details">
+            <span><i class="fas fa-calendar-alt"></i> Tanggal: 21 Juni 2019</span>
+            <span><i class="fas fa-map-marker-alt"></i> Tempat: Aula Kantor
+              Walikota Kotamobagu</span>
+          </div>
+          <p>
+            Oben merupakan aplikasi yang dikembangkan oleh diskominfo kota
+            kotamobagu sebagai platform digital pemesanan bentor.
+          </p>
+        </div>
+      </div>
+
+      <div class="agenda-item">
+        <div class="agenda-image">
+          <a class="agenda-foto" href="kategeexpo.png" data-plugin-option="{" type":"image"}">
+            <img src="kategeexpo.png" alt="Launching Aplikasi Oben" />
+          </a>
+        </div>
+        <div class="agenda-content">
+          <h2>Kotamobagu Expo</h2>
+          <div class="agenda-details">
+            <span><i class="fas fa-calendar-alt"></i> Tanggal: 20-25 Agustus
+              2019</span>
+            <span><i class="fas fa-map-marker-alt"></i> Tempat: Alun-alun
+              kotamobagu</span>
+          </div>
+          <p>
+            Kotamobagu Expo adalah ajang pameran tahunan yang menampilkan
+            potensi daerah, mulai dari produk UMKM, industri kreatif, kuliner,
+            hingga seni dan budaya.
+          </p>
+        </div>
+      </div>
+      <div class="agenda-item">
+        <div class="agenda-image">
+          <a class="agenda-foto" href="pelatihanumkm.png" data-plugin-option="{" type":"image"}">
+            <img src="pelatihanumkm.png" alt="Launching Aplikasi Oben" />
+          </a>
+        </div>
+        <div class="agenda-content">
+          <h2>Pelatihan UMKM</h2>
+          <div class="agenda-details">
+            <span><i class="fas fa-calendar-alt"></i> Tanggal: 20 Agustus 2025</span>
+            <span><i class="fas fa-map-marker-alt"></i> Tempat: Aula Kantor Walikota Kotamobagu</span>
+          </div>
+          <p>
+            Era digital sudah di depan mata! Jangan sampai bisnismu ketinggalan. Diskominfo Kotamobagu dengan bangga
+            mempersembahkan "Pelatihan Literasi Digital untuk UMKM Lokal". Yuk, belajar bareng cara memaksimalkan media
+            sosial, strategi pemasaran online, hingga tips & trik jualan di e-commerce yang bakal bikin usahamu makin
+            cuan! 📈💻
+          </p>
+        </div>
+      </div>
+      <div class="agenda-item">
+        <div class="agenda-image">
+          <a class="agenda-foto" href="rapat.jpeg" data-plugin-option="{" type":"image"}">
+            <img src="rapat.jpeg" alt="Launching Aplikasi Oben" />
+          </a>
+        </div>
+        <div class="agenda-content">
+          <h2>Rapat Pembahasan Persiapan Kegiatan Monev Website OPD Lingkungan Pemerintah Kota Kotamobagu</h2>
+          <div class="agenda-details">
+            <span><i class="fas fa-calendar-alt"></i> Tanggal: 06 Juli 2020</span>
+            <span><i class="fas fa-map-marker-alt"></i> Tempat: Kantor Diskominfo Kotamobagu</span>
+          </div>
+          <p>
+            Rapat Pembahasan Mengenai Persiapan Kegiatan Monitoring dan Evaluasi (Monev) Website Organisasi Perangkat
+            Daerah (OPD) di Lingkungan Pemerintah Kota Kotamobagu.
+          </p>
+        </div>
+      </div>
+      <div class="agenda-item">
+        <div class="agenda-image">
+          <a class="agenda-foto" href="funrun.png" data-plugin-option="{" type":"image"}">
+            <img src="funrun.png" alt="Launching Aplikasi Oben" />
+          </a>
+        </div>
+        <div class="agenda-content">
+          <h2>Diskominfo Fun Run</h2>
+          <div class="agenda-details">
+            <span><i class="fas fa-calendar-alt"></i> Tanggal: 02 Agustus 2025</span>
+            <span><i class="fas fa-map-marker-alt"></i> Titik Kumpul: Alun-alun
+              kotamobagu</span>
+          </div>
+          <p>
+            Ayo sehat dan bergembira bersama dalam event yang paling ditunggu-tunggu! Diskominfo Kotamobagu proudly
+            present: DISKOMINFO KTG FUN RUN 2025! Siapkan sepatu lari terbaikmu dan ajak semua teman, keluarga, dan
+            komunitasmu untuk ikut serta dalam lari santai 5K yang penuh doorprize dan kejutan seru lainnya. Bukan cuma
+            soal lari, tapi soal kebersamaan
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-top">
+        <img src="logo_ktg.png" alt="Logo Kotamobagu" />
+        <div class="footer-title">
+          <span>WEB PORTAL</span>
+          <p>DISKOMINFO KOTA KOTAMOBAGU</p>
+        </div>
+      </div>
+      <div class="footer-main">
+        <div class="footer-contact">
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Jl. Ahmad Yani, Gogagoman, Kotamobagu Barat, Kota Kotamobagu,
+              Sulawesi Utara</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-globe"></i>
+            <span>https://diskominfoookotamobagu.go.id</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:diskominfo@kotamobagukota.go.id">diskominfo@kotamobagukota.go.id</a>
+          </div>
+        </div>
+        <div class="footer-social">
+          <h4>Sosial Media:</h4>
+          <div class="social-icons">
+            <a href="https://youtube.com/@diskominfokotamobagu722?si=KtBtqfCbWlp175Wi" target="_blank"
+              class="social-youtube"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.facebook.com/share/1ZgVfr8hnq/" target="_blank" class="social-facebook"><i
+                class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/diskominfo_kotamobagu?igsh=MWZoamNpN3p5MGNyaw==" target="_blank"
+              class="social-instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Diskominfo Kota Kotamobagu. All Rights Reserved.</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+  <script src="navbar.js"></script>
+</body>
+
+</html>

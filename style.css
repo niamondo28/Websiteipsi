@@ -1,0 +1,1867 @@
+/* PENGATURAN DASAR & FONT              */
+
+* {
+
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* siang*/
+body {
+  font-family: "Lexend", sans-serif;
+  background-color: #f0f4f8;
+  padding-top: 80px;
+}
+
+/* 1. HEADER & NAVBAR*/
+header {
+  background: linear-gradient(to right, #284912, #648b73);
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 50px;
+  margin-right: 15px;
+}
+
+.logo span {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+nav {
+  /* position: absolute; */
+  left: 60%;
+  transform: translateX(-50%);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 30px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  transition: opacity 0.3s;
+}
+
+nav ul li a:hover {
+  opacity: 0.7;
+}
+
+/* 2. DROPDOWN NAVBAR */
+
+.drop-btn i {
+  margin-left: 5px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 250px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 0 0 5px 5px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* 3. HERO SECTION (Layanan Card)  */
+
+.hero {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  min-height: calc(100vh - 80px);
+  padding: 20px;
+  background-image: url("fotoipsi/ipsi.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.infoo-card {
+  color: #ffffff;
+  background-color: rgba(13, 71, 161, 0.8);
+  text-align: center;
+  max-width: 700px;
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+/* layout grid untuk kartu di dalam hero */
+.layanan-grid {
+  display: flex;
+  /* Bikin card di dalemnya jadi sejajar */
+  flex-direction: column;
+  gap: 20px;
+  /* Jarak antar card */
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+/* Menata setiap kartu layanan */
+.layanan-card {
+  background-color: #648b73;
+  color: white;
+  padding: 30px;
+  border-radius: 15px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  opacity: 0.9;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.layanan-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.layanan-card-icon {
+  width: 60px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.layanan-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.layanan-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* @media (max-width: 992px) {
+  .layanan-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+} */
+
+@media (min-width: 768px) {
+  .hero {
+    gap: 30px;
+  }
+
+  .layanan-grid {
+    flex-direction: row;
+  }
+
+  .infoo-card {
+    font-size: 1em;
+  }
+
+  .layanan-card h3 {
+    font-size: 1.5em;
+  }
+}
+
+.hamburger {
+  margin-left: auto;
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+@media screen and (max-width: 900px) {
+  .hamburger {
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    display: none;
+    z-index: 1000;
+    transform: none !important;
+  }
+
+  nav.active {
+    display: block;
+    background-color: #4aa863 !important;
+  }
+
+  nav ul {
+    list-style: none;
+    /* Atur ulang list-style */
+    display: flex;
+    /* Gunakan flexbox kembali */
+    flex-direction: column;
+    /* Ini yang membuat item berbaris ke bawah */
+    background-color: transparent !important;
+    padding: 10px 0;
+  }
+
+  nav ul li {
+    margin: 0;
+  }
+
+  header nav.active ul li a {
+    display: block;
+    padding: 15px 30px;
+    color: floralwhite !important;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    background-color: #4aa890;
+    display: none;
+    width: 100%;
+  }
+
+  .dropdown-content a {
+    color: #cce5ff !important;
+    padding-left: 50px;
+  }
+
+  .dropdown.active .dropdown-content {
+    display: block;
+  }
+}
+
+/* Tata letak utama halaman */
+.halaman-konten {
+  display: flex;
+  align-items: flex-start;
+  /* Konten sejajar dari atas */
+  gap: 30px;
+  /* Jarak antara kolom teks dan gambar */
+  flex-wrap: wrap;
+  /* Izinkan item pindah ke bawah di layar kecil */
+}
+
+/* Kolom konten teks */
+.konten-card {
+  flex: 2;
+  /* Mengambil ruang lebih banyak */
+  min-width: 300px;
+  /* Lebar minimum sebelum pindah ke bawah */
+}
+
+/* Kolom info-card dengan gambar */
+.info-card {
+  flex: 1;
+  /* Mengambil ruang lebih sedikit */
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+
+  /* BATASAN UTAMA: Ini mencegah kontainer jadi terlalu besar */
+  max-width: 450px;
+}
+
+/* Gambar di dalam info-card */
+.info-card img {
+  width: 100%;
+  /* Lebar gambar mengisi kontainernya */
+  height: auto;
+  /* Tinggi menyesuaikan secara otomatis */
+  object-fit: contain;
+}
+
+/* Teks caption di bawah gambar */
+.info-card .caption {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* Pengaturan untuk layar kecil (di bawah 768px) */
+@media (max-width: 768px) {
+  .halaman-konten {
+    flex-direction: column;
+    /* Ubah tata letak menjadi vertikal */
+  }
+
+  /* Buat lebar kolom info-card menyesuaikan */
+  .info-card {
+    max-width: 100%;
+    /* Hapus batasan lebar di layar kecil */
+  }
+}
+
+/* ======================================= */
+/* 4. BERITA SECTION (HOMEPAGE)            */
+/* ======================================= */
+.berita-section {
+  padding: 30px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.berita-section h1 {
+  background-color: #4aa863;
+  border-radius: 8px;
+  display: inline-block;
+  padding: 10px 20px;
+}
+
+.berita-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.berita-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  /* max-width: 1200px; */
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .berita-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 0;
+  }
+}
+
+.berita-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.berita-card-img {
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.berita-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.berita-card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.berita-card-content p {
+  flex-grow: 1;
+}
+
+.berita-card-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.berita-card-content p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.berita-card-meta {
+  margin-top: 15px;
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.berita-card-meta i {
+  margin-right: 8px;
+}
+
+.berita-card-btn {
+  display: inline-block;
+  background-color: #1a8754;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 15px;
+  transition: background-color 0.3s;
+  text-align: center;
+  align-self: flex-start;
+}
+
+.berita-card-btn:hover {
+  background-color: #146c43;
+}
+
+/* GAYA UNTUK CARD BERITA MODERN (GAMBAR DI KANAN) */
+
+.berita-card-modern {
+  display: flex;
+  /* Wajib! Mengaktifkan Flexbox */
+  justify-content: space-between;
+  /* Memberi jarak maksimal antara teks dan gambar */
+  align-items: center;
+  /* Membuat teks dan gambar sejajar di tengah (vertikal) */
+
+  background-color: #ffffff;
+  padding: 20px;
+  /* Jarak dari tepi card ke konten di dalamnya */
+  margin-bottom: 20px;
+  /* Jarak antar card */
+
+  border-radius: 12px;
+  /* Membuat sudut lebih melengkung */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  /* Bayangan yang lebih halus */
+  border: 1px solid #eaeaea;
+  /* Garis tepi tipis agar terlihat rapi */
+}
+
+/* Mengatur area teks di sebelah kiri */
+.berita-card-modern .konten-teks {
+  flex-grow: 1;
+  /* Biarkan area teks mengisi ruang yang tersedia */
+  padding-right: 20px;
+  /* Jarak antara teks dengan gambar */
+}
+
+.berita-card-modern .konten-teks h3 {
+  margin: 0 0 8px 0;
+  /* Margin bawah 8px, sisanya 0 */
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #333;
+}
+
+.berita-card-modern .konten-teks p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #666;
+}
+
+/* Mengatur area gambar di sebelah kanan */
+.berita-card-modern .konten-gambar {
+  flex-shrink: 0;
+  /* Mencegah gambar menyusut */
+  width: 180px;
+  /* Lebar gambar */
+  height: 120px;
+  /* Tinggi gambar */
+}
+
+.berita-card-modern .konten-gambar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Trik andalan agar gambar tidak gepeng */
+  border-radius: 8px;
+  /* Sudut gambar juga dibuat melengkung */
+}
+
+/* ======================================= */
+/* 5. FOOTER                               */
+/* ======================================= */
+footer {
+  background-color: #ffffff;
+  color: #333;
+  font-size: 14px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.footer-top {
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.footer-top img {
+  height: 50px;
+  margin-right: 15px;
+}
+
+.footer-title span {
+  display: block;
+  font-weight: 500;
+  color: #888;
+}
+
+.footer-title p {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #222;
+}
+
+.footer-main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.contact-item i {
+  font-size: 1.1rem;
+  color: #0d47a1;
+  margin-right: 20px;
+  margin-top: 4px;
+  width: 20px;
+  text-align: center;
+}
+
+.footer-social h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.social-icons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+  margin-right: 10px;
+  transition: transform 0.3s;
+}
+
+.social-icons a:hover {
+  transform: scale(1.1);
+}
+
+.social-youtube {
+  background-color: #ff0000;
+}
+
+.social-facebook {
+  background-color: #1877f2;
+}
+
+.social-instagram {
+  background-color: #e4405f;
+}
+
+.footer-bottom {
+  background-color: #2c3e50;
+  color: #ccc;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .footer-main {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-social {
+    margin-top: 20px;
+  }
+}
+
+/* ======================================= */
+/* 6. STYLE HALAMAN-HALAMAN KONTEN LAINNYA */
+/* ======================================= */
+
+/* Wadah umum untuk halaman seperti Sejarah, Visi Misi, dll. */
+.halaman-konten {
+  padding: 60px 20px;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Kartu putih semi-transparan untuk menampung teks */
+.konten-card {
+  max-width: 800px;
+  background-color: rgba(255, 255, 255, 0.92);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.konten-card h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  color: #2c3e50;
+}
+
+.konten-card p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #34495e;
+  text-align: justify;
+  margin-bottom: 15px;
+}
+
+.konten-card h2 {
+  font-size: 1.8rem;
+  color: #1a5276;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #aed6f1;
+  padding-bottom: 5px;
+}
+
+.konten-card ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.konten-card ul li {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #34495e;
+  margin-bottom: 10px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.konten-card ul li::before {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #1a8754;
+  position: absolute;
+  left: 0;
+  top: 5px;
+}
+
+/* Latar belakang spesifik per halaman */
+#sejarah-page {
+  background-image: url("fotoipsi/ipsi.jpg");
+}
+
+#visimisi-page {
+  background-image: url("fotoipsi/ipsi.jpg");
+}
+
+#layanan-domain-page {
+  background-image: url("fotoipsi/ipsi.jpg");
+}
+
+#layanan-infrastruktur-page {
+  background-image: url("fotoipsi/ipsi.jpg");
+}
+
+#pengaduan-page {
+  background-image: url("fotoipsi/ipsi.jpg");
+}
+
+#berita-page {
+  background-image: url("fotoipsi/ipsi.jpg");
+}
+
+#galeri-page {
+  background-image: url("fotoipsi/ipsi.jpg");
+}
+
+/* ======================================= */
+/* 7. HALAMAN PROFIL PEJABAT               */
+/* ======================================= */
+#pejabat-page {
+  background-color: #f4f7f9;
+}
+
+.pejabat-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.pejabat-container h1 {
+  text-align: center;
+  font-size: 2.8rem;
+  color: #ffffff;
+  margin-bottom: 40px;
+  background-color: #4aa863;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.pejabat-container .sub-judul {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #ffffff;
+  background-color: #4aa863;
+  margin-bottom: 50px;
+}
+
+.pejabat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.pejabat-card {
+  background-color: #4aa863;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+  text-align: center;
+  padding: 30px 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.pejabat-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.pejabat-card img {
+  width: 120px;
+  height: 160px;
+  border-radius: 5px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+}
+
+.pejabat-info h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 5px;
+}
+
+.pejabat-info .jabatan {
+  font-size: 1rem;
+  color: black;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.pejabat-info .nip {
+  font-size: 0.9rem;
+  color: #777;
+  background-color: #f8f9fa;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+@media (max-width: 992px) {
+  .pejabat-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .pejabat-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ======================================= */
+/* 8. HALAMAN PENGADUAN                    */
+/* ======================================= */
+#pengaduan-page {
+  background-color: #f4f7f9;
+  align-items: flex-start;
+}
+
+.pengaduan-container {
+  width: 100%;
+  max-width: 800px;
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.pengaduan-container h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.pengaduan-container .sub-judul {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: "Lexend", sans-serif;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #0d47a1;
+  box-shadow: 0 0 0 2px rgba(13, 71, 161, 0.2);
+}
+
+.btn-kirim {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background-color: #1a8754;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-kirim:hover {
+  background-color: #146c43;
+}
+
+/* ======================================= */
+/* 9. HALAMAN BERITA (DEDICATED PAGE)      */
+/* ======================================= */
+#berita-page {
+  background-color: #f4f7f9;
+  align-items: flex-start;
+}
+
+#berita-page .berita-section h1 {
+  text-align: center;
+  font-size: 2.8rem;
+  color: #feffff;
+  margin-bottom: 10px;
+}
+
+/* .pengumuman-section {
+    padding: 60px 20px 30px;
+    background-color: #ffffff;
+}
+.pengumuman-section .container {
+    max-width: 1200px;
+    margin: 0   auto;
+}
+
+.pengumuman-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+.pengumuman-item img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.015);
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .pengumuman-grid {
+        grid-template-columns: 1fr;
+    }
+} */
+
+/* hierachical grid di index html */
+
+.galeri-kompleks-section {
+  padding: 60px 20px;
+  background-color: #fdfeff;
+}
+
+.galeri-kompleks-section h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+/* Grid utama dengan 2 kolom */
+.galeri-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  /* Kolom kiri 2x lebih lebar dari kanan */
+  gap: 20px;
+  align-items: flex-start;
+  /* Menjaga item tetap rata atas */
+}
+
+/* Penataan untuk kolom kiri */
+.galeri-kolom-kiri {
+  display: flex;
+  flex-direction: column;
+  /* Menumpuk gambar utama dan baris bawah */
+  gap: 20px;
+  align-items: center;
+}
+
+/* Grid untuk 2 gambar kecil di bawah */
+.galeri-susun-bawah {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* 2 kolom sama lebar */
+  gap: 15px;
+  width: 100%;
+}
+
+.btn-selengkapnya {
+  display: inline-block;
+  /* Bikin background pas seukuran teks */
+  background-color: #0d47a1;
+  /* Warna background biru */
+  color: white;
+  /* Warna teks putih */
+  padding: 10px 20px;
+  /* Jarak di dalam tombol */
+  margin-top: 15px;
+  /* Jarak dari galeri di atasnya */
+  border-radius: 5px;
+  /* Sudut yang melengkung */
+  text-decoration: none;
+  /* Menghilangkan garis bawah link */
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.tombol-selengkapnya:hover {
+  background-color: #1e88e5;
+  /* Warna biru lebih cerah pas disentuh mouse */
+}
+
+.galeri-kolom-kanan {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.galeri-item.map-item {
+  height: 300px;
+}
+
+.map-item iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Styling umum untuk semua item gambar di galeri ini */
+.galeri-layout .galeri-item {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.galeri-layout .galeri-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Mencegah gambar gepeng */
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.galeri-layout .galeri-item img:hover {
+  transform: scale(1.05);
+  /* Efek zoom saat disentuh kursor */
+}
+
+/* Membuat responsif */
+@media (max-width: 768px) {
+  .galeri-layout {
+    grid-template-columns: 1fr;
+    /* Layout menjadi 1 kolom di HP */
+  }
+}
+
+/* Styling Berita 2 card paling bawah */
+
+.gallery-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.card-image-container {
+  position: relative;
+  height: 200px;
+  /* Sesuaikan tinggi yang diinginkan */
+  overflow: hidden;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.card-image.active {
+  opacity: 1;
+}
+
+.card-caption {
+  padding: 15px;
+  text-align: center;
+  background-color: #f9f9f9;
+  font-weight: bold;
+}
+
+/* Gallery page */
+
+.galleryp-header {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.galleryp-header h1 {
+  background-color: #4aa863;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 1.53em;
+}
+
+.galleryp-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,
+      minmax(250px, 1fr));
+  /* Sesuaikan minmax untuk lebar card */
+  gap: 15px;
+  padding: 20px;
+  max-width: 1200px;
+  /* Lebar maksimum container galeri */
+  margin: 0 auto;
+  /* Tengah horizontal */
+}
+
+.galleryp-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galleryp-card:hover {
+  transform: scale(1.03);
+  /* Card membesar halus */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.cardp-image-container {
+  position: relative;
+  height: 150px;
+  /* Sesuaikan tinggi gambar dalam card */
+  overflow: hidden;
+}
+
+.cardp-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.galleryp-card:hover .cardp-image {
+  transform: scale(1.1);
+  /* Zoom gambar */
+  filter: brightness(70%);
+  /* Gambar agak gelap */
+}
+
+/* Overlay teks saat hover */
+.cardp-overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.galleryp-card:hover .cardp-overlay-text {
+  opacity: 1;
+  /* Teks muncul pas hover */
+}
+
+.cardp-caption {
+  padding: 10px;
+  text-align: center;
+  font-size: 0.9em;
+  color: #333;
+  min-height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tombol-selengkapnya {
+  display: inline-block;
+  background-color: #0d47a1;
+  /* Warna biru yang sama kayak header */
+  color: white;
+  padding: 10px 20px;
+  margin-top: 10px;
+  /* Jarak dari judul di atasnya */
+  border-radius: 5px;
+  text-decoration: none;
+  /* Hilangin garis bawah default link */
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.tombol-selengkapnya:hover {
+  background-color: #1e88e5;
+  /* Warna biru lebih cerah pas disentuh mouse */
+}
+
+/* Ganti style .tab-buttons yang lama dengan ini */
+.tab-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* Bikin 2 kolom sama lebar */
+  gap: 15px;
+  /* Jarak antar tombol */
+  margin-bottom: 20px;
+}
+
+/* Ganti style .tab-btn yang lama dengan ini */
+.tab-btn {
+  padding: 20px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  font-size: 1.1em;
+  font-weight: 500;
+  border-radius: 8px;
+  /* Sudut melengkung di semua sisi */
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.tab-btn:hover {
+  background-color: #e0e0e0;
+  border-color: #ccc;
+  transform: translateY(-2px);
+  /* Efek sedikit naik pas disentuh mouse */
+}
+
+/* Style buat tombol yang lagi aktif */
+.tab-btn.active {
+  background-color: #0d47a1;
+  color: white;
+  border-color: #0d47a1;
+  box-shadow: 0 4px 10px rgba(13, 71, 161, 0.3);
+}
+
+#tupoksi-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("fotoipsi/ipsi.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.cardtupoksi-container {
+  width: 80%;
+  max-width: 600px;
+}
+
+.cardtupoksi {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  /* Penting agar sudut melengkung terlihat rapi */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cardtupoksi-header {
+  padding: 15px 20px;
+  background-color: #4aa863;
+  color: white;
+  cursor: pointer;
+  /* Mengubah kursor menjadi tangan saat di atas judul */
+  transition: background-color 0.3s;
+}
+
+.cardtupoksi-header:hover {
+  background-color: #4aa863;
+}
+
+/* INI BAGIAN KUNCINYA: Sembunyikan konten secara default */
+.cardtupoksi-content {
+  display: none;
+  padding: 20px;
+  border-top: 1px solid #ddd;
+}
+
+/* Style tambahan saat kartu aktif/terbuka */
+.cardtupoksi.active .cardtupoksi-header {
+  background-color: #4aa823;
+  /* Ubah warna header saat aktif */
+}
+
+/* PERINTAH UNTUK MENAMPILKAN KONTEN SAAT KARTU AKTIF */
+.cardtupoksi.active .cardtupoksi-content {
+  display: block;
+  /* Tampilkan kontennya */
+}
+
+.cardtupoksi-header1 {
+  border-radius: 8px;
+  display: flex;
+  color: #f1f1f1;
+  background-color: #4aa863;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* styling struktur organisasi page */
+#struktur-page {
+  background-image: url("fotoipsi/ipsi.jpg");
+}
+
+/* Container utama */
+.struktur-container {
+  display: flex;
+  flex-direction: column;
+  /* default: susun ke bawah */
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Judul */
+.cardstruktur h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  background: #4aa863;
+  color: #f9f9f9;
+  border-radius: 8px;
+}
+
+/* Gambar struktur */
+.foto-struktur img {
+  max-width: 100%;
+  /* biar gambar tidak melewati layar */
+  height: auto;
+  /* biar proporsional */
+  border-radius: 8px;
+  /* opsional, biar lebih halus */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* opsional, kasih bayangan */
+}
+
+/* Responsive breakpoint */
+@media (max-width: 768px) {
+  .cardstruktur h1 {
+    font-size: 1.5rem;
+    /* kecilkan ukuran judul */
+  }
+
+  .struktur-container {
+    padding: 10px;
+    /* kurangi padding di mobile */
+  }
+
+  .foto-struktur img {
+    max-width: 100%;
+    /* isi layar penuh */
+  }
+}
+
+/* lAYANANN PPID*/
+
+/* Import font yang bagus (opsional) */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+.ppid-container {
+  width: 100%;
+  max-width: 800px;
+  background: #4aa863;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.ppid-container h1 {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+#ppidbaru-page {
+  background-image: url("fotoipsi/ipsi.jpg");
+}
+
+.ppid-container>p {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+.cardppid {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  /* Penting untuk animasi */
+  transition: all 0.3s ease;
+}
+
+.cardppid:hover {
+  border-color: green;
+  box-shadow: 0 2px 10px rgba(0, 123, 255, 0.15);
+}
+
+.cardppid-header {
+  background-color: #f8f9fa;
+  padding: 15px 20px;
+  cursor: pointer;
+  /* Mengubah kursor jadi tangan saat di-hover */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+  /* Agar teks tidak bisa di-select */
+}
+
+.cardppid-header h2 {
+  margin: 0;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.iconppid {
+  font-size: 1.5em;
+  font-weight: 600;
+  color: green;
+  transition: transform 0.3s ease;
+  /* Animasi untuk ikon */
+}
+
+/* Bagian terpenting di CSS */
+.cardppid-content {
+  padding: 0 20px;
+  /* Padding horizontal, vertikalnya 0 saat tersembunyi */
+  max-height: 0;
+  /* Awalnya tingginya 0 */
+  overflow: hidden;
+  /* Sembunyikan konten yang meluap */
+  transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+  /* Animasi! */
+}
+
+/* === Kelas 'active' yang akan kita tambahkan dengan JavaScript === */
+
+.cardppid.active .cardppid-content {
+  padding: 20px;
+  max-height: 1000px;
+  /* Atur ke angka yang cukup besar untuk menampung konten */
+  transition: max-height 0.5s ease-in, padding 0.4s ease-in;
+  /* Animasi saat membuka */
+}
+
+.cardppid.active .iconppid {
+  transform: rotate(45deg);
+  /* Ubah ikon '+' menjadi 'x' */
+}
+
+/* Styling untuk form */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  /* Agar padding tidak menambah lebar */
+}
+
+button[type="submit"] {
+  background-color: green;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: rgb(47, 255, 175);
+}
+
+/* Bagian Agenda Kegiatan */
+.caption-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.caption-info span {
+  display: inline-block;
+}
+
+/* Responsif: kalau layar kecil, jadi 1 kolom */
+@media (max-width: 600px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* === HALAMAN AGENDA KEGIATAN === */
+
+/* Wadah utama untuk konten di tengah halaman */
+.container-agenda {
+  max-width: 900px;
+  /* Lebar maksimal konten */
+  margin: 30px auto;
+  /* Membuatnya berada di tengah */
+  padding: 0 20px;
+  /* Jarak dari tepi layar */
+}
+
+/* Judul "Agenda Kegiatan" */
+.agenda-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.agenda-header h1 {
+  display: inline-block;
+  /* Agar background bisa pas dengan teks */
+  background-color: #4aa863;
+  /* Warna biru dari gambar */
+  color: white;
+  padding: 10px 30px;
+  border-radius: 50px;
+  /* Membuat sudut sangat melengkung */
+  font-size: 1.8em;
+}
+
+/* Kartu untuk setiap item agenda */
+.agenda-item {
+  display: flex;
+  /* INI KUNCINYA! Membuat gambar dan teks sejajar */
+  align-items: flex-start;
+  /* Menjaga agar konten rata atas */
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+  /* Jarak antar kartu agenda */
+  overflow: hidden;
+  /* Penting agar gambar tidak keluar dari border-radius */
+}
+
+/* Bagian gambar di sebelah kiri */
+.agenda-image {
+  flex: 0 0 250px;
+  /* Lebar gambar tetap 250px */
+}
+
+.agenda-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Memastikan gambar terpotong rapi, tidak gepeng */
+  display: block;
+}
+
+/* Bagian konten/teks di sebelah kanan */
+.agenda-content {
+  padding: 25px;
+  flex: 1;
+  /* Mengambil sisa ruang yang tersedia */
+}
+
+.agenda-content h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.agenda-content p {
+  color: #555;
+  line-height: 1.6;
+  /* Jarak antar baris teks */
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+
+/* Detail kecil (tanggal & tempat) */
+.agenda-details {
+  display: flex;
+  flex-direction: column;
+  /* Menyusun tanggal dan tempat ke bawah */
+  gap: 10px;
+  /* Jarak antara tanggal dan tempat */
+  color: #666;
+}
+
+.agenda-details span {
+  display: flex;
+  align-items: center;
+}
+
+.agenda-details i {
+  margin-right: 15px;
+  /* Jarak antara ikon dan teks */
+  color: #4a4aae;
+  /* Warna biru agar serasi */
+  width: 15px;
+  /* Menyamakan lebar ikon */
+  text-align: center;
+}
+
+#kontak-page {
+  background-image: url("fotoipsi/ipsi.jpg");
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.contact-details .map-container {
+  width: 45%;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 300px;
+  margin-left: 10px;
+}
+
+.contact-details h2 {
+  margin-bottom: 15px;
+}
+
+.contact-details p {
+  margin-bottom: 15px;
+}
+
+.contact-details i {
+  margin-right: 15px;
+}
+
+/* Sejarah-Page*/
+/*Sejarah Page */
+.sejarah-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #4aa863;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.sejarah-container h1 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.sejarah-container h2 {
+  color: #f6f8fa;
+}
+
+.sejarah-container p {
+  line-height: 1.7;
+  text-align: justify;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.sejarah-hero {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+/* Styling Bagian Data & Statistik */
+.data-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.data-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.data-header h1 {
+  font-size: 2.8em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.data-header p {
+  font-size: 1.1em;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Menggunakan CSS Grid untuk layout kartu yang responsif */
+.data-grid {
+  display: grid;
+  /* Membuat 3 kolom di layar besar, dan otomatis jadi 1 di layar kecil */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.data-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.data-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.data-card .card-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  color: #4aa823;
+}
+
+.data-card .card-header i {
+  font-size: 2em;
+}
+
+.data-card .card-header h2 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.data-card .card-content p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* Style untuk list data statistik */
+.data-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.data-list li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #333;
+  background-color: #f7f9fc;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.data-list li a:hover {
+  background-color: #e9eff8;
+  color: #4aa823;
+}
+
+/* Style untuk link download dokumen */
+.document-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.doc-link {
+  text-decoration: none;
+  color: #4aa823;
+  background-color: transparent;
+  border: 1px solid #cce0ff;
+  padding: 12px 15px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.doc-link:hover {
+  background-color: #f0f5ff;
+}
+
+/* Style untuk tombol survei */
+.btn-survey {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #28a745;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1em;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+  margin-top: auto;
+  /* Mendorong tombol ke bawah kartu */
+}
+
+.btn-survey:hover {
+  background-color: #218838;
+}
+
+/* Layanan TIK */
+/*TIK CARD*/
+.TIK-card img {
+  width: 400px;
+  height: 600px;
+  margin-left: 20px;
+  padding: 20px;
+  object-fit: cover;
+}

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IPSI SULUT</title>
+
+  <!-- dari sini -->
+  <link id="theme-css" rel="stylesheet" href="style2.css" />
+  <script>
+    const DAY_START = 6;
+    const NIGHT_START = 18;
+    function applyAutoTheme() {
+      const hour = new Date().getHours();
+      const isDay = hour >= DAY_START && hour < NIGHT_START;
+      const link = document.getElementById("theme-css");
+      const newHref = isDay ? "style.css" : "style2.css";
+      if (link.getAttribute("href") !== newHref) {
+        link.setAttribute("href", newHref);
+      }
+      document.documentElement.setAttribute(
+        "data-theme",
+        isDay ? "day" : "night"
+      );
+    }
+    document.addEventListener("DOMContentLoaded", applyAutoTheme);
+    setInterval(applyAutoTheme, 60 * 1000); // tiap 1 menit
+    document.addEventListener("visibilitychange", () => {
+      if (!document.hidden) applyAutoTheme();
+    });
+  </script>
+  <!-- sampe sini -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body>
+  <div id="navbar-placeholder"></div>
+
+  <main class="hero">
+    <div class="layanan-grid">
+      <a href="Galeri.html" class="layanan-card">
+        <img src="niuniu/Logoipsi.png" alt="Ikon Pengaduan Masyarakat" class="layanan-card-icon" />
+        <div class="layanan-teks">
+          <h3>Galeri</h3>
+          <p>Dokumentasi kegiatan, IPSI Sulut.</p>
+        </div>
+      </a>
+
+      <a href="Sejarah.html" class="layanan-card">
+        <img src="niuniu/Logoipsi.png" alt="Ikon Domain & Email" class="layanan-card-icon" />
+        <div class="layanan-teks">
+          <h3>Sejarah Pencak Silat</h3>
+          <p>Jejak perjuangan dan perkembangan IPSI Sulut sejak awal berdiri.</p>
+        </div>
+      </a>
+
+      <a href="VisiMisi.html" class="layanan-card">
+        <img src="niuniu/Logoipsi.png" alt="Ikon Infrastruktur TIK" class="layanan-card-icon" />
+        <div class="layanan-teks">
+          <h3>Visi Misi</h3>
+          <p>Rangkaian visi dan misi untuk membawa IPSI Sulut menuju masa depan.</p>
+        </div>
+      </a>
+    </div>
+  </main>
+
+  <section class="galeri-kompleks-section">
+    <div class="galeri-layout">
+      <div class="galeri-kolom-kiri">
+        <div class="galeri-item">
+          <img src="fotoipsi/piala gubernur.jpg" alt="Gambar Utama Galeri" />
+        </div>
+        <h3>Galeri IPSI Sulut</h3>
+
+        <div class="galeri-susun-bawah">
+          <div class="galeri-item">
+            <figure class="galeri-figure">
+              <img src="fotoipsi/PON.webp" alt="Gambar Galeri Kecil 1" />
+              <figcaption>Hadapi PON XXI/2024</figcaption>
+            </figure>
+          </div>
+          <div class="galeri-item">
+            <figure class="galeri-figure">
+              <img src="fotoipsi/Spobobnas.webp" alt="Gambar Galeri Kecil 2" />
+              <figcaption>Lima Pesilat SPOPNAS Sulut Raih Medali Emas di Piala Bupati Bolmut</figcaption>
+            </figure>
+          </div>
+          <div class="galeri-item">
+            <figure class="galeri-figure">
+              <img src="fotoipsi/ketuaipsi.jpeg" alt="Gambar Galeri Kecil 3" />
+              <figcaption>
+                Ketua Umum Pengprov IPSI Sulut, Drs Pontowuisang Kakauhe
+                Mengatakan Tahun 2026,
+                Pengprov IPSI Sulut Agendakan Kejuaraan Piala Menpora RI
+              </figcaption>
+            </figure>
+          </div>
+          <div class="galeri-item">
+            <figure class="galeri-figure">
+              <img src="fotoipsi/Ponbeladiri.webp" alt="Gambar Galeri Kecil 4" />
+              <figcaption>Jelang PON Beladiri dan POPNAS, IPSI Sulut Gelar Seleksi Ketat untuk Cetak Atlet Berprestasi
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <a href="Galeri.html" class="btn-selengkapnya">Selengkapnya</a>
+      </div>
+
+      <div class="galeri-kolom-kanan">
+        <div class="galeri-item">
+          <img src="fotoipsi/Kejuaraan-Pencak-Silat.jpeg" alt="Gambar Galeri Tinggi" />
+        </div>
+
+        <div class="galeri-item map-item">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.5247860311365!2d124.835146!3d1.4590218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x328774eb8b6e6aff%3A0x5975d14114eca8f3!2sKantor%20DISPORA%20Kota%20Manado!5e0!3m2!1sen!2sid!4v1758108218529!5m2!1sen!2sid"
+            width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="berita-section">
+    <h2>Berita Terkini</h2>
+    <div class="berita-grid">
+      <article class="berita-card">
+        <div class="berita-card-img">
+          <img src="fotoipsi/Ponbeladiri.webp" alt="Wali Kota Buka HUT RI" />
+        </div>
+        <div class="berita-card-content">
+          <h3>
+            Jelang PON Beladiri dan POPNAS, IPSI Sulut Gelar Seleksi Ketat untuk Cetak Atlet Berprestasi
+          </h3>
+          <p>Sulut - Jelang PON Beladiri dan POPNAS, IPSI Sulut...</p>
+          <div class="berita-card-meta">
+            <span><i class="fa-solid fa-calendar-days"></i> Kamis,
+              31/07/2025</span>
+          </div>
+          <a href="https://beritamanado.com/jelang-pon-dan-popnas-ipsi-sulut-gelar-seleksi-ketat-untuk-cetak-atlet-berprestasi/"
+            class="berita-card-btn">Baca Selengkapnya</a>
+        </div>
+      </article>
+
+      <article class="berita-card">
+        <div class="berita-card-img">
+          <img src="fotoipsi/ketuapanitia.webp" alt="Berita Dua" />
+        </div>
+        <div class="berita-card-content">
+          <h3>
+            Kejuaraan Piala Gubernur 2025 Sukses, Pengprov IPSI Sulut Semakin Mandiri
+          </h3>
+          <p>Manado - Kejuaraan Piala Gubernur 2025 Sukses, Pengprov IPSI Sulut...</p>
+          <div class="berita-card-meta">
+            <span><i class="fa-solid fa-calendar-days"></i> jumat,
+              03/05/2025</span>
+          </div>
+          <a href="https://barometer.co.id/2025/05/kejuaraan-piala-gubernur-2025-sukses-pengprov-ipsi-sulut-semakin-mandiri/."
+            class="berita-card-btn">Baca Selengkapnya</a>
+        </div>
+      </article>
+
+      <article class="berita-card">
+        <div class="berita-card-img">
+          <img src="fotoipsi/wasitpelatih.jpg" alt="Berita Tiga" />
+        </div>
+        <div class="berita-card-content">
+          <h3>
+            Pontowuisang Kakauhe: Pelatih dan Wasit IPSI Sulut Harus Buka Diri Hadapi Perubahan Zaman
+          </h3>
+          <p>Manado - Kalau kita terus bertahan di balik jubah tradisional, jangan salahkan jika Sulawesi Utara akan
+            terus tertinggal...</p>
+          <div class="berita-card-meta">
+            <span><i class="fa-solid fa-calendar-days"></i> Minggu,
+              15/06/2025</span>
+          </div>
+          <a href="https://beritamanado.com/pontowuisang-kakauhe-pelatih-dan-wasit-ipsi-sulut-harus-buka-diri-hadapi-perubahan-zaman/."
+            class="berita-card-btn">Baca Selengkapnya</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+  <div id="footer-placeholder"></div>
+
+  <script src="script.js"></script>
+  <script src="navbar.js"></script>
+  <script src="footer.js"></script>
+</body>
+
+</html>

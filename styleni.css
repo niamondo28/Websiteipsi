@@ -1,0 +1,128 @@
+/* Import font yang bagus (opsional) */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+.ppid-container {
+  width: 100%;
+  max-width: 800px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #0056b3;
+  margin-bottom: 10px;
+}
+#ppidbaru-page {
+  background-image: url("bg_kota.png");
+}
+.ppid-container > p {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+.cardppid {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  overflow: hidden; /* Penting untuk animasi */
+  transition: all 0.3s ease;
+}
+
+.cardppid:hover {
+  border-color: #007bff;
+  box-shadow: 0 2px 10px rgba(0, 123, 255, 0.15);
+}
+
+.cardppid-header {
+  background-color: #f8f9fa;
+  padding: 15px 20px;
+  cursor: pointer; /* Mengubah kursor jadi tangan saat di-hover */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none; /* Agar teks tidak bisa di-select */
+}
+
+.cardppid-header h2 {
+  margin: 0;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.iconppid {
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #007bff;
+  transition: transform 0.3s ease; /* Animasi untuk ikon */
+}
+
+/* Bagian terpenting di CSS */
+.cardppid-content {
+  padding: 0 20px; /* Padding horizontal, vertikalnya 0 saat tersembunyi */
+  max-height: 0; /* Awalnya tingginya 0 */
+  overflow: hidden; /* Sembunyikan konten yang meluap */
+  transition: max-height 0.4s ease-out, padding 0.4s ease-out; /* Animasi! */
+}
+
+/* === Kelas 'active' yang akan kita tambahkan dengan JavaScript === */
+
+.cardppid.active .cardppid-content {
+  padding: 20px;
+  max-height: 1000px; /* Atur ke angka yang cukup besar untuk menampung konten */
+  transition: max-height 0.5s ease-in, padding 0.4s ease-in; /* Animasi saat membuka */
+}
+
+.cardppid.active .iconppid {
+  transform: rotate(45deg); /* Ubah ikon '+' menjadi 'x' */
+}
+
+/* Styling untuk form */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Agar padding tidak menambah lebar */
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Bagian Agenda Kegiatan */
+.caption-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.caption-info span {
+  display: inline-block;
+}

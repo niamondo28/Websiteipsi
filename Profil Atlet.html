@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profil Atlet - IPSI Sulut</title>
+
+  <!-- Tema siang/malam otomatis -->
+  <link id="theme-css" rel="stylesheet" href="style2.css" />
+  <script>
+    const DAY_START = 6;
+    const NIGHT_START = 18;
+    function applyAutoTheme() {
+      const hour = new Date().getHours();
+      const isDay = hour >= DAY_START && hour < NIGHT_START;
+      const link = document.getElementById("theme-css");
+      const newHref = isDay ? "style.css" : "style2.css";
+      if (link.getAttribute("href") !== newHref) {
+        link.setAttribute("href", newHref);
+      }
+      document.documentElement.setAttribute("data-theme", isDay ? "day" : "night");
+    }
+    document.addEventListener("DOMContentLoaded", applyAutoTheme);
+    setInterval(applyAutoTheme, 60 * 1000);
+    document.addEventListener("visibilitychange", () => {
+      if (!document.hidden) applyAutoTheme();
+    });
+  </script>
+
+  <!-- Font dan ikon -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body>
+  <div id="navbar-placeholder"></div>
+
+  <main class="halaman-konten" id="atlet-page">
+    <div class="pejabat-container">
+      <h1>Profil Atlet</h1>
+
+      <div class="pejabat-grid">
+        <!-- Atlet 1 -->
+        <div class="pejabat-card">
+          <img src="Atlet/Adicandra Gosal.jpg" alt="Foto Atlet" />
+          <div class="pejabat-info">
+            <h3>Adicandra viji gosal</h3>
+            <p>Tempat/TglLahir: Tondano, 08/08/2008</p>
+            <p>Kelas/Kategori: Kelas E Putra Remaja</p>
+          </div>
+        </div>
+
+        <!-- Atlet 2 -->
+        <div class="pejabat-card">
+          <img src="Atlet/HiskiaTahulending.jpg" alt="Foto Atlet" />
+          <div class="pejabat-info">
+            <h3>Hizkia Tahulending</h3>
+            <p>Tempat/TglLahir: Papusungan, 18/10/2009</p>
+            <p>Kelas/Kategori: Kelas H Putra Remaja</p>
+          </div>
+        </div>
+
+        <!-- Atlet 3 -->
+        <div class="pejabat-card">
+          <img src="Atlet/Karina Pongilatan.jpg" alt="Foto Atlet " />
+          <div class="pejabat-info">
+            <h3>Karina Pongilatan</h3>
+            <p>Tempat/TglLahir: Peleloan, 02/07/2007</p>
+            <p>Kelas/Kategori: Kelas A Putri Dewasa</p>
+          </div>
+        </div>
+
+        <!-- Atlet 4 -->
+        <div class="pejabat-card">
+          <img src="Atlet/Afdall Mondo.jpg" alt="Foto Atlet " />
+          <div class="pejabat-info">
+            <h3>Afdall Fauzan mondo</h3>
+            <p>Tempat/TglLahir: Kotamobagu, 01/02/2009</p>
+            <p>Kelas/Kategori: Kelas A Putra Remaja</p>
+          </div>
+        </div>
+
+        <!-- Atlet 5 -->
+        <div class="pejabat-card">
+          <img src="Atlet/Rey piter.jpg" alt="Foto Atlet" />
+          <div class="pejabat-info">
+            <h3>Euglyo Rich Vanos Piter</h3>
+            <p>Tempat/TglLahir: Manado, 26/12/2008</p>
+            <p>Kelas/Kategori: Kelas I Putra Remaja</p>
+          </div>
+        </div>
+
+        <!-- Atlet 6 -->
+        <div class="pejabat-card">
+          <img src="Atlet/Agil Pakaya.jpg" alt="Foto Atlet" />
+          <div class="pejabat-info">
+            <h3>Muhamad Agil pakaya</h3>
+            <p>Tempat/TglLahir: Manado, 01/12/2002</p>
+            <p>Kelas/Kategori: Kelas B Putra Dewasa</p>
+          </div>
+        </div>
+
+        <!-- Atlet 7 -->
+        <div class="pejabat-card">
+          <img src="Atlet/Anggi.jpg" alt="Foto Atlet " />
+          <div class="pejabat-info">
+            <h3>Anggi Dwi Nindi Abdul Kadir</h3>
+            <p>Tempat/TglLahir:Kotamobagu, 10/11/2008</p>
+            <p>Kelas/Kategori: Kelas A Putri Remaja</p>
+          </div>
+        </div>
+
+        <!-- Atlet 8 -->
+        <div class="pejabat-card">
+          <img src="Atlet/ainia mokoagow.jpeg" alt="Foto Atlet " />
+          <div class="pejabat-info">
+            <h3>Ainia Mokoagow</h3>
+            <p>Tempat/TglLahir:Pobundayan, 11/03/2009</p>
+            <p>Kelas/Kategori: Kelas B Putri Remaja</p>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-top">
+        <img src="fotoipsi/Logoipsi.png" alt="Logo IPSI" />
+        <div class="footer-title">
+          <span>WEB PORTAL</span>
+          <p>IPSI Sulawesi Utara</p>
+        </div>
+      </div>
+
+      <div class="footer-main">
+        <div class="footer-contact">
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Jl. Stadion Selatan, Ranotana, Kec. Sario, Kota Manado, Sulawesi Utara</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-globe"></i>
+            <span>@disporamanado</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:disporamanado16@gmail.com">disporamanado16@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="footer-social">
+          <h4>Sosial Media:</h4>
+          <div class="social-icons">
+            <a href="https://www.youtube.com/@disporamanado" target="_blank" class="social-youtube"><i
+                class="fab fa-youtube"></i></a>
+            <a href="https://www.facebook.com/disporamanado/" target="_blank" class="social-facebook"><i
+                class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/disporamanado/?hl=id" target="_blank" class="social-instagram"><i
+                class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Ikatan Pencak Silat Sulawesi Utara. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="navbar.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profil Wasit - Ipsi sulut</title>
+  <!-- dari sini -->
+  <link id="theme-css" rel="stylesheet" href="style2.css" />
+  <script>
+    const DAY_START = 6;
+    const NIGHT_START = 18;
+    function applyAutoTheme() {
+      const hour = new Date().getHours();
+      const isDay = hour >= DAY_START && hour < NIGHT_START;
+      const link = document.getElementById("theme-css");
+      const newHref = isDay ? "style.css" : "style2.css";
+      if (link.getAttribute("href") !== newHref) {
+        link.setAttribute("href", newHref);
+      }
+      document.documentElement.setAttribute(
+        "data-theme",
+        isDay ? "day" : "night"
+      );
+    }
+    document.addEventListener("DOMContentLoaded", applyAutoTheme);
+    setInterval(applyAutoTheme, 60 * 1000); // tiap 1 menit
+    document.addEventListener("visibilitychange", () => {
+      if (!document.hidden) applyAutoTheme();
+    });
+  </script>
+  <!-- sampe sini -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body>
+  <div id="navbar-placeholder"></div>
+  <main class="halaman-konten" id="wasit-page">
+    <div class="pejabat-container">
+      <h1>Profil Wasit</h1>
+
+      <div class="pejabat-grid">
+        <div class="pejabat-card">
+          <img src="Wasit/rosnata.jpg" alt="Foto Wasit" />
+          <div class="pejabat-info">
+            <h3>Rosnata kaudis</h3>
+            <p class="jabatan-tingkat">WASIT NASIONAL</p>
+          </div>
+        </div>
+
+        <div class="pejabat-card">
+          <img src="Wasit/Fermy nender.jpeg" alt="Foto wasit" />
+          <div class="pejabat-info">
+            <h3>Fermy Ferby Nender</h3>
+            <p>Tempat/TglLahir: Tondano, 17/02/1982</p>
+            <p class="jabatan-tingkat">WASIT DAERAH KELAS II </p>
+          </div>
+        </div>
+
+        <div class="pejabat-card">
+          <img src="wasit/Junike.jpeg" alt="Foto wasit" />
+          <div class="pejabat-info">
+            <h3>Junike Tumengkol, S.E</h3>
+            <p>Tempat/TglLahir: Tondano, 10/06/1974</p>
+            <p class="jabatan-tingkat">WASIT INTERNATIONAL KELAS III </p>
+          </div>
+        </div>
+
+        <div class="pejabat-card">
+          <img src="wasit/Meiva mawikere.jpeg" alt="Foto wasit" />
+          <div class="pejabat-info">
+            <h3>Meiva Mawikere</h3>
+            <p>Tempat/TglLahir: Tomohon, 30/03/2003</p>
+            <p class="jabatan-tingkat">WASIT CABANG </p>
+          </div>
+        </div>
+
+        <div class="pejabat-card">
+          <img src="Wasit/Apris Rayldi.jpg" alt="Foto wasit" />
+          <div class="pejabat-info">
+            <h3>Apris Rayldi Suruh</h3>
+            <p>Tempat/TglLahir: Makatara, 27/04/2004</p>
+            <p class="jabatan-tingkat">WASIT DAERAH </p>
+          </div>
+        </div>
+
+        <div class="pejabat-card">
+          <img src="Wasit/Azril.jpg" alt="Foto wasit" />
+          <div class="pejabat-info">
+            <h3>Mohamad Azril Asmi</h3>
+            <p>Tempat/TglLahir: Mogolaing, 03/06/2004</p>
+            <p class="jabatan-tingkat">WASIT DAERAH </p>
+          </div>
+        </div>
+
+        <div class="pejabat-card">
+          <img src="Wasit/Agung Kekenusa.png" alt="Foto wasit" />
+          <div class="pejabat-info">
+            <h3>Agung Yohanis Kekenusa</h3>
+            <p>Tempat/TglLahir: Tahuna, 10/04/1998</p>
+            <p class="jabatan-tingkat">WASIT DAERAH </p>
+          </div>
+        </div>
+
+        <div class="pejabat-card">
+          <img src="Wasit/Apris Rayldi.jpg" alt="Foto wasit" />
+          <div class="pejabat-info">
+            <h3>Apris Rayldi Suruh</h3>
+            <p>Tempat/TglLahir: Makatara, 27/04/2004</p>
+            <p class="jabatan-tingkat">WASIT DAERAH </p>
+          </div>
+        </div>
+
+        <div class="pejabat-card">
+          <img src="Wasit/Apris Rayldi.jpg" alt="Foto wasit" />
+          <div class="pejabat-info">
+            <h3>Apris Rayldi Suruh</h3>
+            <p>Tempat/TglLahir: Makatara, 27/04/2004</p>
+            <p class="jabatan-tingkat">WASIT DAERAH </p>
+          </div>
+        </div>
+
+        <div class="pejabat-card">
+          <img src="Wasit/Apris Rayldi.jpg" alt="Foto wasit" />
+          <div class="pejabat-info">
+            <h3>Apris Rayldi Suruh</h3>
+            <p>Tempat/TglLahir: Makatara, 27/04/2004</p>
+            <p class="jabatan-tingkat">WASIT DAERAH </p>
+          </div>
+        </div>
+
+        <div class="pejabat-card">
+          <img src="Wasit/Apris Rayldi.jpg" alt="Foto wasit" />
+          <div class="pejabat-info">
+            <h3>Apris Rayldi Suruh</h3>
+            <p>Tempat/TglLahir: Makatara, 27/04/2004</p>
+            <p class="jabatan-tingkat">WASIT DAERAH </p>
+          </div>
+        </div>
+
+        <div class="pejabat-card">
+          <img src="Wasit/Apris Rayldi.jpg" alt="Foto wasit" />
+          <div class="pejabat-info">
+            <h3>Apris Rayldi Suruh</h3>
+            <p>Tempat/TglLahir: Makatara, 27/04/2004</p>
+            <p class="jabatan-tingkat">WASIT DAERAH </p>
+          </div>
+        </div>
+
+        <div class="pejabat-card">
+          <img src="Wasit/Apris Rayldi.jpg" alt="Foto wasit" />
+          <div class="pejabat-info">
+            <h3>Apris Rayldi Suruh</h3>
+            <p>Tempat/TglLahir: Makatara, 27/04/2004</p>
+            <p class="jabatan-tingkat">WASIT DAERAH </p>
+          </div>
+        </div>
+
+        <div class="pejabat-card">
+          <img src="Wasit/Apris Rayldi.jpg" alt="Foto wasit" />
+          <div class="pejabat-info">
+            <h3>Apris Rayldi Suruh</h3>
+            <p>Tempat/TglLahir: Makatara, 27/04/2004</p>
+            <p class="jabatan-tingkat">WASIT DAERAH </p>
+          </div>
+        </div>
+
+        <div class="pejabat-card">
+          <img src="Wasit/Apris Rayldi.jpg" alt="Foto wasit" />
+          <div class="pejabat-info">
+            <h3>Apris Rayldi Suruh</h3>
+            <p>Tempat/TglLahir: Makatara, 27/04/2004</p>
+            <p class="jabatan-tingkat">WASIT DAERAH </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+</body>
+<footer>
+  <div class="footer-container">
+    <div class="footer-top">
+      <img src="fotoipsi/Logoipsi.png" alt="Logo IPSI" />
+      <div class="footer-title">
+        <span>WEB PORTAL</span>
+        <p>IPSI Sulawesi Utara</p>
+      </div>
+    </div>
+    <div class="footer-main">
+      <div class="footer-contact">
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Jl. Stadion Selatan, Ranotana, Kec. Sario, Kota Manado, Sulawesi Utara</span>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-globe"></i>
+          <span>@disporamanado</span>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:disporamanado16@gmail.com">disporamanado16@gmail.com</a>
+        </div>
+      </div>
+      <div class="footer-social">
+        <h4>Sosial Media:</h4>
+        <div class="social-icons">
+          <a href="https://www.youtube.com/@disporamanado" target="_blank" class="social-youtube"><i
+              class="fab fa-youtube"></i></a>
+          <a href="https://www.facebook.com/disporamanado/" target="_blank" class="social-facebook"><i
+              class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/disporamanado/?hl=id" target="_blank" class="social-instagram"><i
+              class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Ikatan Pencak Silat Sulawesi Utara. All Rights Reserved.</p>
+  </div>
+</footer>
+<script src="script.js"></script>
+<script src="navbar.js"></script>
+
+</body>
+
+</html>

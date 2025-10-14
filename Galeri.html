@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri - IPSI SULUT</title>
+    <!-- dari sini -->
+    <link id="theme-css" rel="stylesheet" href="style2.css" />
+    <script>
+        const DAY_START = 6;
+        const NIGHT_START = 18;
+        function applyAutoTheme() {
+            const hour = new Date().getHours();
+            const isDay = hour >= DAY_START && hour < NIGHT_START;
+            const link = document.getElementById("theme-css");
+            const newHref = isDay ? "style.css" : "style2.css";
+            if (link.getAttribute("href") !== newHref) {
+                link.setAttribute("href", newHref);
+            }
+            document.documentElement.setAttribute(
+                "data-theme",
+                isDay ? "day" : "night"
+            );
+        }
+        document.addEventListener("DOMContentLoaded", applyAutoTheme);
+        setInterval(applyAutoTheme, 60 * 1000); // tiap 1 menit
+        document.addEventListener("visibilitychange", () => {
+            if (!document.hidden) applyAutoTheme();
+        });
+    </script>
+    <!-- sampe sini -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+</head>
+
+<body>
+    <div id="navbar-placeholder"></div>
+    <main>
+        <div class="galleryp-header">
+            <h1>Galeri IPSI SULUT</h1>
+        </div>
+
+        <div class="galleryp-container">
+
+
+            <div class="galleryp-card">
+                <a href="fotoipsi/Ponbeladiri.webp" data-lightbox="kegiatan1" data-title="Caption untuk foto 1">
+                    <div class="cardp-image-container">
+                        <img src="fotoipsi/Ponbeladiri.webp" alt="Gambar Galeri 1" class="cardp-image">
+                    </div>
+                    <div class="cardp-caption">Seleksi PON BELA DIRI</div>
+                </a>
+                <a href="fotoipsi/PON.webp" data-lightbox="kegiatan1" data-title="Caption untuk foto 2"
+                    style="display: none;"></a>
+                <a href="PON/1.png" data-lightbox="kegiatan1" data-title="Caption untuk foto 1"
+                    style="display: none;"></a>
+                <a href="PON/2.png" data-lightbox="kegiatan1" data-title="Caption untuk foto 2"
+                    style="display: none;"></a>
+            </div>
+
+            <div class="galleryp-card">
+                <a href="prapopnas/POPNAS.png" data-lightbox="kegiatan2" data-title="Caption untuk foto 1">
+                    <div class="cardp-image-container">
+                        <img src="prapopnas/POPNAS.png" alt="Gambar Galeri 2" class="cardp-image">
+                    </div>
+                    <div class="cardp-caption">PRAPOPNAS 2024</div>
+                </a>
+                <a href="Prapopnas/prapopnas.jpeg" data-lightbox="kegiatan2" data-title="Caption untuk foto "
+                    style="display: none;"></a>
+                <a href="Prapopnas/prapopnas1.jpeg" data-lightbox="kegiatan2" data-title="Caption untuk foto 1"
+                    style="display: none;"></a>
+                <a href="Prapopnas/prapopnas2.jpeg" data-lightbox="kegiatan2" data-title="Caption untuk foto 2"
+                    style="display: none;"></a>
+                <a href="Prapopnas/prapopnas3.jpeg" data-lightbox="kegiatan2" data-title="Caption untuk foto 3"
+                    style="display: none;"></a>
+                <a href="Prapopnas/prapopnas4.jpeg" data-lightbox="kegiatan2" data-title="Caption untuk foto 4"
+                    style="display: none;"></a>
+                <a href="Prapopnas/prapopnas5.jpeg" data-lightbox="kegiatan2" data-title="Caption untuk foto 5"
+                    style="display: none;"></a>
+                <a href="Prapopnas/prapopnas6.jpeg" data-lightbox="kegiatan2" data-title="Caption untuk foto 6"
+                    style="display: none;"></a>
+                <a href="Prapopnas/prapopnas7.jpeg" data-lightbox="kegiatan2" data-title="Caption untuk foto 7"
+                    style="display: none;"></a>
+                <a href="Prapopnas/prapopnas8.jpeg" data-lightbox="kegiatan2" data-title="Caption untuk foto 8"
+                    style="display: none;"></a>
+                <a href="Prapopnas/prapopnas10.jpeg" data-lightbox="kegiatan2" data-title="Caption untuk foto 9"
+                    style="display: none;"></a>
+                <a href="Prapopnas/prapopnas11.jpeg" data-lightbox="kegiatan2" data-title="Caption untuk foto 10"
+                    style="display: none;"></a>
+                <a href="Prapopnas/prapopnas12.jpeg" data-lightbox="kegiatan2" data-title="Caption untuk foto 11"
+                    style="display: none;"></a>
+                <a href="Prapopnas/prapopnas13.jpeg" data-lightbox="kegiatan2" data-title="Caption untuk foto 12"
+                    style="display: none;"></a>
+                <a href="Prapopnas/prapopnas15.jpeg" data-lightbox="kegiatan2" data-title="Caption untuk foto 13"
+                    style="display: none;"></a <a href="Prapopnas/prapopnas16.jpeg" data-lightbox="kegiatan2"
+                    data-title="Caption untuk foto 14" style="display: none;"></a>
+                <a href="Prapopnas/prapopnas17.jpeg" data-lightbox="kegiatan2" data-title="Caption untuk foto 15"
+                    style="display: none;"></a>
+                <a href="Prapopnas/prapopnas18.jpeg" data-lightbox="kegiatan2" data-title="Caption untuk foto 16"
+                    style="display: none;"></a>
+                <a href="Prapopnas/prapopnas19.jpeg" data-lightbox="kegiatan2" data-title="Caption untuk foto 17"
+                    style="display: none;"></a>
+                <a href="Prapopnas/prapopnas20.jpeg" data-lightbox="kegiatan2" data-title="Caption untuk foto 18"
+                    style="display: none;"></a>
+            </div>
+
+            <div class="galleryp-card">
+                <a href="fotoipsi/piala gubernur.jpg" data-lightbox="kegiatan3" data-title="Caption untuk foto 1">
+                    <div class="cardp-image-container">
+                        <img src="fotoipsi/piala gubernur.jpg" alt="Gambar Galeri 3" class="cardp-image">
+                    </div>
+                    <div class="cardp-caption">Piala Gubernur</div>
+                </a>
+                <a href="pertandingan/1.jpeg" data-lightbox="kegiatan3" data-title="Caption untuk foto 1"
+                    style="display: none;"></a>
+                <a href="pertandingan/2.jpeg" data-lightbox="kegiatan3" data-title="Caption untuk foto 2"
+                    style="display: none;"></a>
+                <a href="pertandingan/3.jpeg" data-lightbox="kegiatan3" data-title="Caption untuk foto 3"
+                    style="display: none;"></a>
+                <a href="pertandingan/4.jpeg" data-lightbox="kegiatan3" data-title="Caption untuk foto 4"
+                    style="display: none;"></a>
+                <a href="pertandingan/5.jpeg" data-lightbox="kegiatan3" data-title="Caption untuk foto 5"
+                    style="display: none;"></a>
+                <a href="pertandingan/6.jpeg" data-lightbox="kegiatan3" data-title="Caption untuk foto 6"
+                    style="display: none;"></a>
+            </div>
+
+            <div class="galleryp-card">
+                <a href="pertandingan/ketuaipsi.jpeg" data-lightbox="kegiatan4" data-title="Caption untuk foto 1">
+                    <div class="cardp-image-container">
+                        <img src="pertandingan/ketuaipsi.jpeg" alt="Gambar Galeri 4" class="cardp-image">
+                    </div>
+                    <div class="cardp-caption">Dokumentasi Pertandingan</div>
+                </a>
+                <a href="pertandingan/kegiatan 2.jpeg" data-lightbox="kegiatan4" data-title="Caption untuk foto 1"
+                    style="display: none;"></a>
+                <a href="pertandingan/kegiatan3.jpeg" data-lightbox="kegiatan4" data-title="Caption untuk foto 2"
+                    style="display: none;"></a>
+                <a href="pertandingan/kegiatan4.jpeg" data-lightbox="kegiatan4" data-title="Caption untuk foto 3"
+                    style="display: none;"></a>
+                <a href="pertandingan/kegiatan5.jpeg" data-lightbox="kegiatan4" data-title="Caption untuk foto 4"
+                    style="display: none;"></a>
+                <a href="pertandingan/kegiatan6.jpeg" data-lightbox="kegiatan4" data-title="Caption untuk foto 5"
+                    style="display: none;"></a>
+                <a href="pertandingan/kegiatan7.jpeg" data-lightbox="kegiatan4" data-title="Caption untuk foto 6"
+                    style="display: none;"></a>
+                <a href="pertandingan/kegiatan8.jpeg" data-lightbox="kegiatan4" data-title="Caption untuk foto 7"
+                    style="display: none;"></a>
+                <a href="pertandingan/kegiatan9.jpeg" data-lightbox="kegiatan4" data-title="Caption untuk foto 8"
+                    style="display: none;"></a>
+                <a href="pertandingan/kegiatan10.jpeg" data-lightbox="kegiatan4" data-title="Caption untuk foto 9"
+                    style="display: none;"></a>
+            </div>
+
+            <div class="galleryp-card">
+                <a href="Prestasi/pengky simbar.webp" data-lightbox="kegiatan5" data-title="Caption untuk foto 1">
+                    <div class="cardp-image-container">
+                        <img src="Prestasi/pengky simbar.webp" alt="Gambar Galeri 1" class="cardp-image">
+                    </div>
+                    <div class="cardp-caption">Pengky Simbar SUMBANG EMAS SEA Games final 45-50 kg putri Thailand 2007
+                        di Minicipality Hall,
+                        Sung Noen</div>
+                </a>
+                <a href="Prestasi/pengky simbar.webp" data-lightbox="kegiatan5" data-title="Caption untuk foto 2"
+                    style="display: none;"></a>
+
+            </div>
+            <div class="galleryp-card">
+                <a href="Prestasi/amelia-roring.webp" data-lightbox="kegiatan6" data-title="Caption untuk foto 1">
+                    <div class="cardp-image-container">
+                        <img src="Prestasi/amelia-roring.webp" alt="Gambar Galeri 1" class="cardp-image">
+                    </div>
+                    <div class="cardp-caption">AMELIA RORING SUMBANG EMAS kelas E 65-70 kg di Sea Games XXVI di
+                        Padepokan Pencak Silat,
+                        Taman Mini Indonesia Indah (TMII), Jakarta Timur</div>
+                </a>
+                <a href="Prestasi/amelia-roring.webp" data-lightbox="kegiatan6" data-title="Caption untuk foto 2"
+                    style="display: none;"></a>
+
+            </div>
+            <div class="galleryp-card">
+                <a href="Galeri/Popnas.webp" data-lightbox="kegiatan7" data-title="Caption untuk foto 1">
+                    <div class="cardp-image-container">
+                        <img src="Galeri/Popnas.webp" alt="Gambar Galeri 1" class="cardp-image">
+                    </div>
+                    <div class="cardp-caption">Pesilat Sulut, Harumkan Sulut di Popnas XV 2019</div>
+                </a>
+                <a href="Galeri/prestasipopnas.png" data-lightbox="kegiatan7" data-title="Caption untuk foto 1"
+                    style="display: none;"></a>
+                </a>
+                <a href="Galeri/prestasipopnas.png" data-lightbox="kegiatan7" data-title="Caption untuk foto 2"
+                    style="display: none;"></a>
+
+            </div>
+            <div class="galleryp-card">
+                <a href="Galeri/micklymenmanoppo.jpg" data-lightbox="kegiatan8" data-title="Caption untuk foto 1">
+                    <div class="cardp-image-container">
+                        <img src="Galeri/micklymenmanoppo.jpg" alt="Gambar Galeri 1" class="cardp-image">
+                    </div>
+                    <div class="cardp-caption">Pesilat Sulawesi Utara Micklymen Manoppo Melaju ke Semifinal PON XX Papua
+                    </div>
+                </a>
+                <a href="Galeri/micklymenmanoppo.jpg" data-lightbox="kegiatan8" data-title="Caption untuk foto 1"
+                    style="display: none;"></a>
+                </a>
+                <a href="Galeri/micklymenmanoppo.jpg" data-lightbox="kegiatan8" data-title="Caption untuk foto 2"
+                    style="display: none;"></a>
+
+            </div>
+            <div class="galleryp-card">
+                <a href="Abdul Malick/fotofoto.png" data-lightbox="kegiatan9" data-title="Caption untuk foto 1">
+                    <div class="cardp-image-container">
+                        <img src="Abdul Malick/fotofoto.png" alt="Gambar Galeri 1" class="cardp-image">
+                    </div>
+                    <div class="cardp-caption"> Jejak Prestasi Pesilat Sulawesi Utara Abdul Malick
+                    </div>
+                </a>
+                <a href="Abdul Malick/1.jpg" data-lightbox="kegiatan9" data-title="Caption untuk foto 1"
+                    style="display: none;"></a>
+
+                <a href="Abdul Malick/2.jpg" data-lightbox="kegiatan9" data-title="Caption untuk foto 2"
+                    style="display: none;"></a>
+
+                <a href="Abdul Malick/3.jpg" data-lightbox="kegiatan9" data-title="Caption untuk foto 3"
+                    style="display: none;"></a>
+
+                <a href="Abdul Malick/AbdulMalik.jpg" data-lightbox="kegiatan9" data-title="Caption untuk foto 4"
+                    style="display: none;"></a>
+
+                <a href="Abdul Malick/AbdulMalik6.webp" data-lightbox="kegiatan9" data-title="Caption untuk foto 5"
+                    style="display: none;"></a>
+
+                <a href="Abdul Malick/AbdulMalik7.jpg" data-lightbox="kegiatan9" data-title="Caption untuk foto 6"
+                    style="display: none;"></a>
+
+                <a href="Abdul Malick/AbdulMalik18.jpeg" data-lightbox="kegiatan9" data-title="Caption untuk foto 7"
+                    style="display: none;"></a>
+
+                <a href="Abdul Malick/AbdulMalik19.jpeg" data-lightbox="kegiatan9" data-title="Caption untuk foto 8"
+                    style="display: none;"></a>
+
+                <a href="Abdul Malick/AbdulMalik16.jpeg" data-lightbox="kegiatan9" data-title="Caption untuk foto 9"
+                    style="display: none;"></a>
+
+                <a href="Abdul Malick/AbdulMalik13.jpeg" data-lightbox="kegiatan9" data-title="Caption untuk foto 10"
+                    style="display: none;"></a>
+
+                <a href="Abdul Malick/AbdulMalik10.jpg" data-lightbox="kegiatan9" data-title="Caption untuk foto 11"
+                    style="display: none;"></a>
+
+                <a href="Abdul Malick/AbdulMalik11.jpg" data-lightbox="kegiatan9" data-title="Caption untuk foto 12"
+                    style="display: none;"></a>
+
+                <a href="Abdul Malick/AbdulMalik4.jpg" data-lightbox="kegiatan9" data-title="Caption untuk foto 13"
+                    style="display: none;"></a>
+                </a>
+            </div>
+
+            <div class="galleryp-card">
+                <a href="dayatlimonu/dayat.png" data-lightbox="kegiatan10" data-title="Caption untuk foto 1">
+                    <div class="cardp-image-container">
+                        <img src="dayatlimonu/dayat.png" alt="Gambar Galeri 1" class="cardp-image">
+                    </div>
+                    <div class="cardp-caption">Prestasi Pesilat Sulawesi Utara Hidayat Limonu</div>
+                </a>
+            </div>
+            <a href="dayatlimonu/dayat1.png" data-lightbox="kegiatan10" data-title="Caption untuk foto 2"
+                style="display: none;"></a>
+            <a href="dayatlimonu/dayat2.png" data-lightbox="kegiatan10" data-title="Caption untuk foto 3"
+                style="display: none;"></a>
+            <a href="dayatlimonu/dayat3.png" data-lightbox="kegiatan10" data-title="Caption untuk foto 4"
+                style="display: none;"></a>
+            <a href="dayatlimonu/3.jpg" data-lightbox="kegiatan10" data-title="Caption untuk foto 6"
+                style="display: none;"></a>
+            <a href="dayatlimonu/4.jpg" data-lightbox="kegiatan10" data-title="Caption untuk foto 7"
+                style="display: none;"></a>
+            <a href="dayatlimonu/5.jpg" data-lightbox="kegiatan10" data-title="Caption untuk foto 8"
+                style="display: none;"></a>
+            <a href="dayatlimonu/6.jpg" data-lightbox="kegiatan10" data-title="Caption untuk foto 9"
+                style="display: none;"></a>
+            <a href="dayatlimonu/7.jpg" data-lightbox="kegiatan10" data-title="Caption untuk foto 10"
+                style="display: none;"></a>
+            <a href="dayatlimonu/8.jpg" data-lightbox="kegiatan10" data-title="Caption untuk foto 8"
+                style="display: none;"></a>
+            <a href="dayatlimonu/9.jpg" data-lightbox="kegiatan10" data-title="Caption untuk foto 9"
+                style="display: none;"></a>
+            <a href="dayatlimonu/10.jpg" data-lightbox="kegiatan10" data-title="Caption untuk foto 10"
+                style="display: none;"></a>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-top">
+                <img src="fotoipsi/Logoipsi.png" alt="Logo IPSI">
+                <div class="footer-title">
+                    <span>WEB PORTAL</span>
+                    <p> IPSI Sulawesi Utara</p>
+                </div>
+            </div>
+            <div class="footer-main">
+                <div class="footer-contact">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Jl. Stadion Selatan, Ranotana, Kec. Sario, Kota Manado, Sulawesi Utara</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-globe"></i>
+                        <span>@disporamanado</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:disporamanado16@gmail.com">disporamanado16@gmail.com</a>
+                    </div>
+                </div>
+                <div class="footer-social">
+                    <h4>Sosial Media:</h4>
+                    <div class="social-icons">
+                        <a href="https://www.youtube.com/@disporamanado" target="_blank" class="social-youtube"><i
+                                class="fab fa-youtube"></i></a>
+                        <a href="https://www.facebook.com/disporamanado/" target="_blank" class="social-facebook"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/disporamanado/?hl=id" target="_blank"
+                            class="social-instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy;2025 Ikatan Pencak Silat Sulawesi Utara. All Rights Reserved.</p>
+            </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="navbar.js"></script>
+</body>
+
+</html>

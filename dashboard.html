@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin - IPSI Sulut</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Lexend", sans-serif;
+        }
+
+        body {
+            background-color: #f0f4f8;
+        }
+
+        header {
+            background-color: #284912;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 20px;
+        }
+
+        nav a {
+            color: white;
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            padding: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .card h2 {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Dashboard Admin</h1>
+        <nav>
+            <a href="login.html">Logout</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <h2>Kelola Galeri</h2>
+            <p>Tambahkan, edit, atau hapus foto kegiatan IPSI.</p>
+        </div>
+
+        <div class="card">
+            <h2>Kelola Berita</h2>
+            <p>Tambahkan, edit, atau hapus berita terbaru IPSI.</p>
+        </div>
+
+        <div class="card">
+            <h2>Kelola Profil Atlet</h2>
+            <p>Tambahkan atau edit profil atlet yang terdaftar.</p>
+        </div>
+    </div>
+</body>
+
+</html>

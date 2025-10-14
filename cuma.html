@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Test Hamburger</title>
+  <style>
+    header {
+      background: #284912;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 60px;
+    }
+
+    .hamburger {
+      font-size: 24px;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    nav ul {
+      list-style: none;
+      display: none;
+      flex-direction: column;
+      background: #2f5233;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul.active {
+      display: flex;
+    }
+
+    nav ul li {
+      text-align: center;
+      padding: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">LOGO</div>
+    <button class="hamburger" id="hamburger">☰</button>
+    <nav>
+      <ul>
+        <li><a href="#">Beranda</a></li>
+        <li><a href="#">Profil</a></li>
+        <li><a href="#">Layanan</a></li>
+        <li><a href="#">Publikasi</a></li>
+        <li><a href="#">Data</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const navMenu = document.querySelector("nav ul");
+
+    hamburger.addEventListener("click", () => {
+      navMenu.classList.toggle("active");
+    });
+  </script>
+</body>
+
+</html>
