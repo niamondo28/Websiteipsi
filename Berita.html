@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Berita Terkini - IPSI SULUT</title>
     <!-- dari sini -->
-    <link id="theme-css" rel="stylesheet" href="style2.css" />
+    <link id="theme-css" rel="stylesheet" href="css/style2.css" />
     <script>
         const DAY_START = 6;
         const NIGHT_START = 18;
@@ -14,7 +14,7 @@
             const hour = new Date().getHours();
             const isDay = hour >= DAY_START && hour < NIGHT_START;
             const link = document.getElementById("theme-css");
-            const newHref = isDay ? "style.css" : "style2.css";
+            const newHref = isDay ? "css/style.css" : "css/style2.css";
             if (link.getAttribute("href") !== newHref) {
                 link.setAttribute("href", newHref);
             }
@@ -100,7 +100,7 @@
 <footer>
     <div class="footer-container">
         <div class="footer-top">
-            <img src="fotoipsi/Logoipsi.png" alt="Logo IPSI" />
+            <img src="fotoipsi/Logoipsi.png" alt="Logoipsi" />
             <div class="footer-title">
                 <span>WEB PORTAL</span>
                 <p>IPSI Sulawesi Utara</p>
@@ -138,11 +138,12 @@
         <p>&copy; 2025 Diskominfo Kota Kotamobagu. All Rights Reserved.</p>
     </div>
 </footer>
-<script src="script.js"></script>
-<script src="navbar.js"></script>
+<script src="script.js" defer></script>
+<script src="navbar.js" defer></script>
 
 </html>
 
 </html>
+
 
 
